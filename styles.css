@@ -1,3 +1,56 @@
 .btn-group {
-  font-size: 12px; /*or whatever size */
+  font-size: 12px; /* or whatever size */
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.icon-middle {
+    vertical-align: middle;
+    margin-right: 8px; /* Adjust the spacing to your preference */
+}
+/* New styles for sticky navbar and other elements */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    position: fixed; /* Updated from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure full width */
+    z-index: 1020; /* High z-index to stay on top */
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h4 {
+    color: #000;
+}
+
+.content {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+    color: #666;
 }

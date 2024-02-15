@@ -1,129 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" dir="ltr">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK5ZE7QN5Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-EK5ZE7QN5Q');
-    </script>
-
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Oncedos: Servicios</title>
+    <meta name="description" content="Sobre Nosotros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Servicios</title>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
 </head>
 <body>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-        </div>
-        <div class="col">
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="curso_intro_algotrading.html">Aprende</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
 
-          </ul>
-        </div>
-      </div>
-    </div>
+<div id="navbar-placeholder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Call the function to update the navigation bar
+      highlightCurrentPage();
+    });
+});
 
-    <img src="3.jpeg" width="1300">
+function highlightCurrentPage() {
+  // Get the current page URL
+  const currentPage = window.location.pathname.split('/').pop();
 
-    <div class="container mt-3">
-        <div class="row">
-            <h1>Nuestros servicios</h1>
-            <div class="col-sm-9">
-                <div class="container mt-3">
-                    <div class="row">
-                        <h4>Algoritmos</h4>
-                        <div class="col-1">
-                            <ion-icon name="flask-outline" size="large"></ion-icon>
-                        </div>
-                        <div class="col-8">
-                            <p>Diseño, calibración e implementación de algoritmos
-                            </p>
-                        </div>
-                    </div>
+  // Find all links in the navbar
+  const links = document.querySelectorAll('#navbar-placeholder .nav-link');
 
-                    <div class="row">
-                        <h4>Propetarias</h4>
-                        <div class="col-1">
-                            <ion-icon name="color-wand-outline" size="large"></ion-icon>
-                        </div>
-                        <div class="col-8">
-                            <p>Codificación, validación, implementación de estrategias
-                                propetarias de inversión
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <h4>Portafolios</h4>
-                        <div class="col-1">
-                            <ion-icon name="briefcase-outline" size="large"></ion-icon>
-                        </div>
-                        <div class="col-8">
-                            <p>Diseño y calibración de portafolios de inversión cuantitativos
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <h4>Automatización</h4>
-                        <div class="col-1">
-                            <ion-icon name="hardware-chip-outline" size="large"></ion-icon>
-                        </div>
-                        <div class="col-8">
-                            <p>Automatización de procesos y reportes
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+  // Loop through each link in the navbar
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      // If the link matches the current page, make the text uppercase
+      link.style.textTransform = 'uppercase';
+    }
+  });
+}
+</script>
 
 
-    <div class="container mt-3">
-        <div class="row">
-          <div class="col-8">
-            <h3>Contáctanos</h3>
-            <a href="mailto:info@oncedos.com" target="_blank" class="btn btn-primary">Tienes alguna duda de nuestros servicios?  Mándanos un mail a info@oncedos.com</a>
-          </div>
-        </div>
-      </div>
+<main class="container">
+    <img src="3.jpeg" alt="Oncedos Banner">
+    <section class="mt-4"></section>
+            <h1>Servicios</h1><br>
+                  <h4>Servicios Integrales para los Desafíos Modernos</h4>
+                    <p class="content">Soluciones a Medida para las Necesidades de Su Negocio. En OnceDos,
+                        estamos dedicados a proporcionar un espectro de servicios diseñados para satisfacer
+                        las demandas únicas de su industria. Nuestra experiencia abarca áreas críticas de
+                        innovación tecnológica y estrategia financiera, asegurando que su organización se
+                        mantenga a la vanguardia en un paisaje que evoluciona rápidamente.
+                    </p><br>
+                  <h4>Soluciones de Inteligencia de Negocios (BI)</h4>
+                    <p class="content">
+                        Optimice la Toma de Decisiones con BI Avanzado. Desbloquee el potencial completo de sus datos con nuestras
+                        soluciones de Inteligencia de Negocios. Desde almacenamiento de datos y análisis hasta informes y visualización,
+                        empoderamos a su equipo para tomar decisiones informadas que impulsan el crecimiento y la eficiencia.
+                    </p><br>
+                  <h4>Ciencia de Datos y Análisis</h4>
+                    <p class="content">
+                        Aproveche la Ciencia de Datos para Obtener Perspectivas Sin Paralelo. Utilice nuestra experiencia en ciencia de datos
+                        para extraer valiosas perspectivas de conjuntos de datos complejos. Nuestros servicios incluyen modelado predictivo,
+                        algoritmos de aprendizaje automático y análisis estadístico para ayudarle a prever tendencias y optimizar operaciones.
+                    </p><br>
+                  <h4>Finanzas Computacionales</h4>
+                    <p class="content">
+                        Estrategias Innovadoras para la Gestión Financiera. Eleve sus estrategias financieras con nuestros servicios de
+                        finanzas computacionales. Ofrecemos comercio algorítmico, soluciones de gestión de riesgos y análisis cuantitativo para
+                        mejorar su enfoque de inversión y planificación financiera.
+                    </p><br>
+                  <h4>Inteligencia Artificial (IA)</h4>
+                    <p class="content">
+                        Transforme Sus Operaciones con IA. Aproveche el poder de la inteligencia artificial para automatizar procesos, mejorar
+                        la precisión y desbloquear nuevas oportunidades. Nuestras soluciones de IA incluyen chatbots, automatización de procesos y
+                        algoritmos de IA personalizados para las necesidades de su negocio.
+                    </p><br>
+                  <h4>Consultoría de Transformación Digital</h4>
+                    <p class="content">
+                        Navegue la Transformación Digital con Confianza. Lidere su industria con nuestros servicios de consultoría de transformación
+                        digital. Nos especializamos en transformar departamentos financieros y operaciones comerciales con tecnologías digitales,
+                        asegurando una integración perfecta y una ventaja competitiva.
+                    </p><br>
 
+</main>
 
-    <div class="container mt-5">
-    </div>
-
-
+<footer class="footer">
+    © 2024 Oncedos. Todos los derechos reservados.
+</footer>
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script src="app.js" charset="utf-8"></script>
-
-</body>
+  </body>
 </html>

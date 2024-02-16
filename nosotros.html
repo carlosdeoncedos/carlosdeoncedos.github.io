@@ -1,117 +1,112 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es" dir="ltr">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EK5ZE7QN5Q"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oncedos: Nosotros</title>
+    <meta name="description" content="Sobre Nosotros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
 
-      gtag('config', 'G-EK5ZE7QN5Q');
-    </script>
-
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
-
-  <title>Oncedos Nosotros</title>
 </head>
-
 <body>
-  <div class="container">
-      <div class="row">
-        <div class="col">
-        </div>
-        <div class="col">
-          <ul class="nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="servicios.html">Servicios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="curso_intro_algotrading.html">Aprende</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
-            </li>
 
-          </ul>
-        </div>
-      </div>
-    </div>
+<div id="navbar-placeholder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Call the function to update the navigation bar
+      highlightCurrentPage();
+    });
+});
 
-  <img src="3.jpeg" width="1300">
+function highlightCurrentPage() {
+  // Get the current page URL
+  const currentPage = window.location.pathname.split('/').pop();
 
-        <div class="container mt-3">
-          <div class="row">
-            <h1>Nosotros</h1>
+  // Find all links in the navbar
+  const links = document.querySelectorAll('#navbar-placeholder .nav-link');
 
-            <div class="col-sm-9">
-              <div class="container mt-3">
-              <div class="row">
+  // Loop through each link in the navbar
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      // If the link matches the current page, make the text uppercase
+      link.style.textTransform = 'uppercase';
+    }
+  });
+}
+</script>
 
-                <h4>¿Quiénes somos?</h4>
-                <div class="col-1">
-                  <ion-icon name="people-outline" size="large"></ion-icon>
-                </div>
-                <div class="col-8">
-                  <p align="justify">Somos un grupo de profesionales multidisiplinario, con un
-                    alto grado de especialización cuantitativa en áreas como
-                    econometría, estadística, matemáticas, programación,
-                    ciencias de datos, economía, ciencias financieras. Damos
-                    servicio de consultoría y desarrollo de AlgoTrading,
-                    Ciencia de datos, Machine Learning, Inteligencia Artificial,
-                    Transformación Digital a diferentes Instituciones Financieras
-                    así como a inversionistas sofisticados.
 
-                    Creemos en la democratización al acceso de la información financiera
-                    de manera puntual, oportuna y para todos.  Es por eso que fundamos
-                    <a style = " white-space:nowrap; " href="http://www.dabu.io">dabu.io</a> , un portal de información bursatil de libre acceso.  En
-                    la primer estapa tenemos disponible para su consulta los estados
-                    trimestrales de las emisoras de la Bolsa Mexicana de Valores. La
-                    información la puedes accesar a traves de API's, bajando un archivo
-                    de Excel, CSV.  También apoyamos a diferentes asociaciones
-                    civiles de alto impacto en nuestro país con modelos predictivos.
-                  </p>
-                  <p>Dos cosas enorgullecen a nuestos socios, su gran experiencia
-                    profesional y sus estuidos de postgrado:
-                  </p>
-                  <ul>
-                    <li>Ciencias Financieras por el "Ilinois Institute of Technology"</li>
-                    <li>Econometría por la “Universitat Pompeu Fabra”</li>
-                    <li>Ciencia de Materiales por el “Massachusetts Iinstitute of Technology”</li>
-                    <li>Economía por la “Universidad Autónoma de Nuevo León”</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<main class="container">
+    <img src="3.jpeg" alt="Oncedos Banner">
+    <section class="mt-4"></section>
+            <h1>
 
-      <div class="container mt-3">
-        <div class="row">
-          <div class="col-8">
-            <h3>Contáctanos</h3>
-            <a href="mailto:info@oncedos.com" target="_blank" class="btn btn-primary">Quieres sabes más de nosotros?  Mándanos un mail a info@oncedos.com</a>
-          </div>
-        </div>
-      </div>
+                Nosotros
+            </h1>
 
-      <div class="container mt-5">
+                <p class="content">
+                    <ion-icon name="rocket-outline" size="large" class="icon-middle"></ion-icon>
+                    En el corazón de OnceDos, yace una metáfora inspirada en un
+                    principio fundamental de la física: la velocidad de escape. Esta velocidad, 11.2 kilómetros por SEGUNDO,
+                    es la necesaria para que un objeto supere la gravedad terrestre y escape hacia el espacio.
+                    Es un umbral que define el límite entre estar atado a lo conocido y aventurarse hacia lo desconocido.
 
-      </div>
+                    En el dinámico y cada vez más tecnológico entorno de negocios actual, adoptamos este concepto como
+                    filosofía central de nuestra marca. La velocidad de escape no solo simboliza la liberación de la atracción
+                    gravitacional de la Tierra, sino que también representa la rapidez y la precisión que consideramos esenciales
+                    para sobresalir y expandirse en el mercado actual.
+
+                    En ONCEDOS, creemos firmemente que la agilidad en la toma de decisiones y su pronta ejecución son
+                    cruciales para el éxito. Así como un objeto necesita alcanzar esa velocidad crítica de 11.2 km/s
+                    para liberarse y explorar nuevos horizontes, las empresas deben ser rápidas y decisivas para superar
+                    las fuerzas de un entorno competitivo cada vez más complejo y alcanzar nuevas alturas.
+</p><br>
+                <h4>
+                    <ion-icon name="flask-outline" size="large" class="icon-middle"></ion-icon>
+                    Inovación Pionera
+                </h4>
+                    <p class="content">En OnceDos, somos un grupo de visionarios, científicos de datos,
+                      analistas financieros y desarrolladores de tecnología dedicados a transformar cómo operan
+                      las empresas. Creemos que la convergencia de la tecnología y la experiencia financiera
+                      podría desbloquear oportunidades sin precedentes para la eficiencia, el crecimiento y la
+                      ventaja estratégica.
+                    </p><br>
+
+                <h4>
+                    <ion-icon name="globe-outline" size="large" class="icon-middle"></ion-icon>
+                    Mundo Futuro
+                </h4>
+
+                <p class="content">
+                        Visionamos un mundo donde cada organización, sin importar su tamaño o sector, tenga acceso
+                        a las herramientas y el conocimiento necesarios para tomar decisiones estratégicas informadas
+                        que los impulsen hacia adelante. Un futuro donde la tecnología y los datos habiliten el
+                        crecimiento sostenible, la excelencia operacional y nuevas posibilidades.
+                    </p><br>
+
+
+                  <h4>
+                      <ion-icon name="analytics-outline" size="large" class="icon-middle"></ion-icon>
+                      Soluciones a la Medida, Resultados Medibles
+                  </h4>
+                    <p class="content">
+                        Entendiendo que no hay dos negocios iguales, nos especializamos en crear soluciones hechas a medida
+                        que abordan los desafíos y oportunidades únicos de nuestros clientes. A través de un enfoque colaborativo,
+                        trabajamos estrechamente con usted para diseñar e implementar estrategias visionarias, prácticas, medibles
+                        y alineadas con sus objetivos. No se trata solo de la tecnología; se trata de cómo la tecnología puede
+                        servir a sus necesidades, hoy y mañana.
+                    </p>
+</main>
+
+<footer class="footer">
+    © 2024 Oncedos. Todos los derechos reservados.
+</footer>
 
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

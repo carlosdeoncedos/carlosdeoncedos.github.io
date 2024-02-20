@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oncedos: Transparencia</title>
+    <meta name="description" content="Sobre Nosotros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Call the function to update the navigation bar
+      highlightCurrentPage();
+    });
+});
+
+function highlightCurrentPage() {
+  // Get the current page URL
+  const currentPage = window.location.pathname.split('/').pop();
+
+  // Find all links in the navbar
+  const links = document.querySelectorAll('#navbar-placeholder .nav-link');
+
+  // Loop through each link in the navbar
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      // If the link matches the current page, make the text uppercase
+      link.style.textTransform = 'uppercase';
+    }
+  });
+}
+</script>
+
+
+<main class="container">
+    <img src="3.jpeg" alt="Oncedos Banner">
+    <section class="mt-4"></section>
+            <h1>
+                Maximizando la Transparencia Financiera con BI: Un Enfoque en Cuentas por Cobrar Ocultas
+                Riesgos y Oportunidades 2da parte
+            </h1>
+
+                <p class="content">
+                    En el panorama empresarial contemporáneo, la Inteligencia Empresarial (BI, por sus siglas en inglés)
+                    se erige como un pilar fundamental para el análisis financiero y la contabilidad, ofreciendo perspectivas
+                    sin precedentes sobre la salud financiera de una organización. Las cuentas por cobrar fuera de libros,
+                    que representan transacciones financieras no registradas en los registros contables oficiales, plantean
+                    un desafío significativo para la transparencia e integridad del informe financiero. Este documento técnico
+                    profundiza en la importancia de la BI para descubrir y gestionar estas cuentas ocultas, asegurando una mayor precisión
+                    financiera y el cumplimiento normativo.
+                </p><br>
+                <p class="content">
+                    El seguimiento y la gestión de cuentas por cobrar fuera de libros está lleno de desafíos. Estas transacciones,
+                    ocultas de los registros financieros oficiales, crean un velo sobre el verdadero estado financiero de una organización.
+                    Esta práctica no solo pone en peligro la precisión financiera, sino que también expone a las empresas a riesgos de
+                    incumplimiento normativo y fraude. La naturaleza opaca de estas transacciones exige una solución robusta para sacarlas
+                    a la luz y gestionarlas efectivamente.
+                </p><br>
+                <p class="content">
+                    Las herramientas de BI ofrecen una esperanza en este entorno financiero turbio. Al integrar datos de fuentes dispares,
+                    la BI proporciona una vista completa de las finanzas de una organización, incluyendo esas esquivas transacciones fuera
+                    de libros. Las técnicas avanzadas de análisis y visualización de datos permiten además la identificación de patrones,
+                    tendencias y discrepancias en las cuentas por cobrar, arrojando luz sobre transacciones que de otro modo podrían permanecer
+                    en la sombra.
+                </p><br>
+                <p class="content">
+                    Las capacidades de automatización de la BI en el seguimiento y reporte de cuentas por cobrar fuera de libros son un cambio de juego.
+                    Esto no solo reduce la probabilidad de error humano, sino que también agiliza la eficiencia de los procesos financieros. Más importante
+                    aún, la BI juega un papel crucial en el cumplimiento de las regulaciones y estándares financieros, asegurando que cada transacción
+                    financiera, registrada o no, se capture y reporte con precisión.
+                </p><br>
+                <p class="content">
+                    Para aprovechar todo el potencial de la BI, las empresas deben adoptar un enfoque estratégico para la integración. Esto implica asegurar
+                    la gobernanza de datos, la compatibilidad del sistema y una formación integral de los usuarios. Seleccionar las herramientas de BI adecuadas,
+                    adaptadas a las necesidades específicas de seguimiento financiero de la empresa, es fundamental para desbloquear los beneficios de la BI en la
+                    gestión de cuentas por cobrar fuera de libros.
+                </p><br>
+                <p class="content">
+                    BI proporciona una solución poderosa a los desafíos planteados por las cuentas por cobrar fuera de libros, ofreciendo un camino hacia una
+                    mayor precisión financiera y cumplimiento normativo.   En OnceDos, entendemos la naturaleza crítica de estos desafíos
+                    y el potencial transformador de la BI. Nuestra experiencia en la implementación de BI y gestión financiera nos posiciona como el socio ideal para
+                    ayudar a su empresa a descubrir y gestionar cuentas por cobrar fuera de libros de una manera transparente para todos y con una gestión eficaz.
+
+                </p>
+
+</main>
+
+<footer class="footer">
+    © 2024 Oncedos. Todos los derechos reservados.
+</footer>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

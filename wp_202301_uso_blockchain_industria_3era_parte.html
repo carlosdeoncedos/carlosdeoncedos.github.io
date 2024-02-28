@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oncedos: BlockChain</title>
+    <meta name="description" content="Sobre Nosotros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Call the function to update the navigation bar
+      highlightCurrentPage();
+    });
+});
+
+function highlightCurrentPage() {
+  // Get the current page URL
+  const currentPage = window.location.pathname.split('/').pop();
+
+  // Find all links in the navbar
+  const links = document.querySelectorAll('#navbar-placeholder .nav-link');
+
+  // Loop through each link in the navbar
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      // If the link matches the current page, make the text uppercase
+      link.style.textTransform = 'uppercase';
+    }
+  });
+}
+</script>
+
+
+<main class="container">
+    <img src="3.jpeg" alt="Oncedos Banner">
+    <section class="mt-4"></section>
+            <h1>
+                Uso de la Tecnología BlockChain en la Indusrtria, 3era Parte<br>
+            </h1>
+                <p class="content">
+                    La revolución del blockchain ha trascendido las fronteras de la criptomoneda para impactar diversas industrias, demostrando ser
+                    una tecnología disruptiva con el potencial de resolver problemas complejos, aumentar la eficiencia y promover la transparencia.
+                    Este impacto se extiende desde el sector financiero hasta el manejo de cadenas de suministro, pasando por la autenticación de
+                    productos y hasta en misiones humanitarias.
+                </p><br>
+                <p class="content">
+                    En el sector financiero, el blockchain ha introducido una nueva era de transacciones seguras y descentralizadas. Un ejemplo
+                    notorio es el uso de tecnología blockchain para facilitar las remesas internacionales. Tradicionalmente, este proceso era
+                    costoso y lento, con múltiples intermediarios. La implementación de blockchain ha permitido realizar estas transacciones de
+                    manera más eficiente y económica. Empresas como Ripple han liderado esta transformación, utilizando blockchain para realizar
+                    pagos transfronterizos en segundos y a una fracción del costo habitual, beneficiando tanto a instituciones financieras como
+                    a usuarios finales.
+                </p><br>
+                <p class="content">
+                    En la gestión de la cadena de suministro, el blockchain ha ofrecido soluciones a problemas de transparencia y trazabilidad,
+                    transformando significativamente cómo las empresas rastrean y aseguran la integridad de sus productos a lo largo de todo el
+                    proceso de suministro. Un ejemplo ilustrativo es el proyecto de Walmart con IBM para usar blockchain en el rastreo de alimentos.
+                    Esta iniciativa surgió como respuesta a la necesidad de aumentar la rapidez en la identificación del origen de los productos
+                    alimenticios en casos de contaminación. A través de la plataforma basada en blockchain, Walmart logró reducir el tiempo necesario
+                    para rastrear el origen de los alimentos, de días a segundos. Esto no solo mejoró significativamente la seguridad alimentaria para
+                    los consumidores sino que también aumentó la eficiencia operativa de Walmart, demostrando el poder del blockchain para transformar
+                    la gestión de la cadena de suministro hacia una mayor transparencia y responsabilidad.
+                </p><br>
+                <p class="content">
+                    En el sector de la salud, el blockchain ofrece soluciones para la gestión segura de registros médicos, permitiendo el intercambio de
+                    información entre diferentes entidades de manera confiable y segura. Un ejemplo es la iniciativa de Estonia, que ha implementado una
+                    infraestructura de salud basada en blockchain para almacenar y compartir registros médicos electrónicos. Esto no solo mejora la eficiencia
+                    en la prestación de servicios de salud sino que también empodera a los pacientes al darles control sobre su propia información médica.
+                </p><br>
+                <p>
+                    El blockchain también está transformando el sector educativo, ofreciendo soluciones para la verificación de credenciales académicas.
+                    La Universidad de Nicosia, por ejemplo, utiliza blockchain para emitir y verificar certificados de grado, proporcionando una forma
+                    transparente y segura de autenticar las calificaciones académicas de sus graduados.
+                </p><br>
+                <p class="cotent">
+                    Inclusive en el ámbito de las misiones humanitarias, el blockchain ha sido un instrumento clave para mejorar la transparencia y la eficacia
+                    de la ayuda. La Cruz Roja, por ejemplo, ha experimentado con blockchain para rastrear la asistencia desde el donante hasta el receptor final.
+                    Esto ha permitido una distribución de recursos más eficiente y transparente, asegurando que la ayuda llegue a quienes más la necesitan y
+                    reduciendo el riesgo de desvío de fondos.
+                </p><br>
+</main>
+
+<footer class="footer">
+    © 2024 Oncedos. Todos los derechos reservados.
+</footer>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

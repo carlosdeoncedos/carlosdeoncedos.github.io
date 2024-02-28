@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oncedos: BlockChain</title>
+    <meta name="description" content="Sobre Nosotros">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Call the function to update the navigation bar
+      highlightCurrentPage();
+    });
+});
+
+function highlightCurrentPage() {
+  // Get the current page URL
+  const currentPage = window.location.pathname.split('/').pop();
+
+  // Find all links in the navbar
+  const links = document.querySelectorAll('#navbar-placeholder .nav-link');
+
+  // Loop through each link in the navbar
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      // If the link matches the current page, make the text uppercase
+      link.style.textTransform = 'uppercase';
+    }
+  });
+}
+</script>
+
+
+<main class="container">
+    <img src="3.jpeg" alt="Oncedos Banner">
+    <section class="mt-4"></section>
+            <h1>
+                Uso de la Tecnología BlockChain en la Indusrtria, 2da Parte<br>
+            </h1>
+                <p class="content">
+                    La tecnología de blockchain, un concepto que se ha convertido en sinónimo de innovación y transformación
+                    digital, va mucho más allá de la esfera de las criptomonedas, aunque fueron estas últimas las que la
+                    catapultaron a la prominencia. Estas tecnologías no solo aseguran el funcionamiento eficaz y seguro de
+                    las criptomonedas, sino que también forman la infraestructura crítica sobre la cual se construye la
+                    tecnología de blockchain. Al explorar la interacción y el papel crucial de estos elementos, nos embarcamos
+                    en un viaje hacia la comprensión de cómo el blockchain se extiende más allá del ámbito financiero,
+                    prometiendo una era de aplicaciones transformadoras en un espectro amplio de industrias.
+                </p><br>
+                <p class="content">
+                    La criptografía, en el contexto de blockchain y criptomonedas, es la práctica de utilizar técnicas de
+                    cifrado para asegurar y verificar transacciones, así como controlar la creación de nuevas unidades de
+                    la moneda. Esta se basa en principios matemáticos complejos y algoritmos para convertir información en
+                    un formato que solo puede ser leído o procesado después de ser descifrado, garantizando así la seguridad
+                    y privacidad de los datos.
+                </p><br>
+                <p class="content">
+                    Una herramienta criptográfica fundamental en el funcionamiento de las criptomonedas es el hashing.
+                    Esta técnica convierte datos de cualquier tamaño en una salida de longitud fija, que actúa como una
+                    huella digital única de la información de entrada. Los hashes son cruciales para la integridad de la
+                    cadena de bloques, ya que aseguran que cada bloque sea único y prácticamente inalterable. Dado que el
+                    hash de cada bloque incluye el hash del bloque anterior, cualquier intento de modificar un bloque
+                    alteraría todos los hashes subsiguientes, lo que hace evidente la manipulación.
+                </p><br>
+                <p class="content">
+                    La descentralización es otro pilar central de las criptomonedas y la tecnología blockchain. En lugar
+                    de depender de una entidad central, como un banco o gobierno, para validar transacciones y mantener
+                    el registro, la blockchain opera a través de una red distribuida de nodos. Cada nodo tiene una copia
+                    completa del libro mayor, trabajando juntos para validar nuevas transacciones mediante un consenso
+                    distribuido. Esto no solo elimina el punto único de fallo sino que también aumenta la resistencia a
+                    la censura y a los ataques maliciosos.
+                </p><br>
+                <p>
+                    El éxito de las criptomonedas demostró la viabilidad de usar criptografía avanzada y redes descentralizadas
+                    para crear sistemas financieros alternativos. Sin embargo, el verdadero potencial del blockchain reside
+                    en su capacidad para servir como una plataforma para aplicaciones descentralizadas (dApps) y contratos
+                    inteligentes, abriendo nuevas vías para automatización y operaciones sin intermediarios en diversas industrias.
+                </p><br>
+                <p class="cotent">
+                    El blockchain, en esencia, es un tipo de base de datos distribuida que mantiene un registro inmutable de
+                    la información en bloques interconectados. La criptografía asegura la integridad y la seguridad de los
+                    datos almacenados, mientras que la descentralización garantiza la durabilidad y la transparencia del sistema.
+                    Esta combinación de características hace que el blockchain sea ideal para aplicaciones que requieren alta seguridad,
+                    transparencia y resistencia a la manipulación.
+                </p><br>
+                <p class="content">
+                    Entender las criptomonedas y su funcionamiento es el primer paso hacia la comprensión del impacto transformador
+                    del blockchain. La criptografía y la descentralización no son solo fundamentales para la seguridad y operación
+                    de las criptomonedas, sino que también son la base sobre la cual se construye la tecnología de blockchain.
+                    Este ensayo sirve como una introducción a estos conceptos, estableciendo una base para explorar cómo el blockchain
+                    está comenzando a redefinir las operaciones y la seguridad en una amplia gama de industrias, prometiendo una
+                    nueva era de innovación y eficiencia.
+                </p>
+</main>
+
+<footer class="footer">
+    © 2024 Oncedos. Todos los derechos reservados.
+</footer>
+
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>

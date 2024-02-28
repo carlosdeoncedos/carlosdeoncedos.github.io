@@ -71,3 +71,19 @@ h1, h4 {
     font-size: 0.8em;
     color: #666;
 }
+
+.quote-style {
+    color: #828282; /* Gray color */
+    font-style: italic; /* Makes text italic */
+    font-size: 18px; /* Sets the font size to 12 pixels */
+    border-left: 2px solid #AFAFAF; /* Creates a solid line on the left, similar to the ">" in markdown */
+    padding-left: 20px; /* Adds some space between the left border and the text */
+    margin-left: 10px; /* Optional: adds some space to the left of the border, if you need it */
+    text-align: justify;
+}
+
+.quote-reference {
+    font-style: italic; /* Makes text italic */
+    font-size: 14px; /* Sets the font size to 12 pixels */
+    text-align: center;
+}
